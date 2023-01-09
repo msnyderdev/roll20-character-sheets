@@ -33,7 +33,7 @@
       </label>
     </div> -->
     <input class="bastionland-nav__hide" type="hidden" name="attr_nav" />
-    <div class="bastionland-body">
+    <div class="bastionland-body">              
       <div class="bastionland-body__stats">
         
         <div class="bastionland-stat">
@@ -50,6 +50,41 @@
               <div class="bastionland-stat__separator" data-i18n="stat_separator"></div>
               <div class="bastionland-hp__value">
                 <input class="bastionland-hp__value" name="attr_hp_max" type="number" min="0" max="18" />
+              </div>
+            </div>
+              <div class="bastionland-stat__body">
+            <!-- hp -->
+            <div class="bastionland-hp gridcolumn__two" data-i18n-title="hp_description">
+              <button class="bastionland-skill__noroll" data-i18n="current_hp" type="roll" value=""></button>
+              <div class="bastionland-hp__value">
+                <input name="attr_hp" type="number" min="0" max="18" />
+              </div>
+              <div class="bastionland-stat__separator" data-i18n="stat_separator"></div>
+              <div class="bastionland-hp__value">
+                <input class="bastionland-hp__value" name="attr_hp_max" type="number" min="0" max="18" />
+              </div>
+            </div>
+            <!-- mp -->
+            <div class="bastionland-mp gridcolumn__two" data-i18n-title="mp_description">
+              <button class="bastionland-skill__noroll" data-i18n="current_mp" type="roll" value=""></button>
+              <div class="bastionland-mp__value">
+                <input name="attr_mp" type="number" min="0" max="18" />
+              </div>
+              <div class="bastionland-stat__separator" data-i18n="stat_separator"></div>
+              <div class="bastionland-hp__value">
+                <input class="bastionland-hp__value" name="attr_hp_max" type="number" min="0" max="18" />
+              </div>
+            </div>
+              <div class="bastionland-stat__body">
+            <!-- mp -->
+            <div class="bastionland-hp gridcolumn__two" data-i18n-title="mp_description">
+              <button class="bastionland-skill__noroll" data-i18n="current_mp" type="roll" value=""></button>
+              <div class="bastionland-mp__value">
+                <input name="attr_mp" type="number" min="0" max="18" />
+              </div>
+              <div class="bastionland-stat__separator" data-i18n="stat_separator"></div>
+              <div class="bastionland-mp__value">
+                <input class="bastionland-mp__value" name="attr_mp_max" type="number" min="0" max="18" />
               </div>
             </div>
             <!-- impaired -->  
@@ -638,7 +673,7 @@
 </rolltemplate>
 <script type="text/worker">
   const updateBonuses = () => {
-      const array = ["hp", "strength","dexterity","charisma"];
+      const array = ["mp", "hp", "strength","dexterity","charisma"];
 
       getAttrs(array, values => {
           array.forEach(item => updateBonus(item, values[item]));
@@ -660,7 +695,7 @@
   }
 
   /* TODO: Stop values from increasing past _max
-  ["hp", "strength","dexterity","charisma"].forEach(item => on(`change:${item}`, eventInfo => updateBonus(item, eventInfo.newValue)));
+  ["mp", "hp", "strength","dexterity","charisma"].forEach(item => on(`change:${item}`, eventInfo => updateBonus(item, eventInfo.newValue)));
    on(`sheet:opened`, eventInfo => updateBonuses())
   */
 </script>
