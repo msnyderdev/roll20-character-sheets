@@ -269,6 +269,7 @@
     "failed_career_number": "#",
     "hit_protection": "Hit Protection & Armour",
     "hp_description": "This represents your ability to avoid being hit.",
+    "mp_description": "You magical focus and concentration.",
     "impaired": "Impaired",
     "impaired_description": "Attacks that are IMPAIRED, such as firing through cover, or fighting in handcuffs, roll d4 DAMAGE only, and cannot receive BONUS DAMAGE.",
     "injuries": "Injuries",
